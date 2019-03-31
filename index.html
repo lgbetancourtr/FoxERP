@@ -43,7 +43,7 @@
                 <div class="card">
                     <div class="card-body">
                         <h5 class="card-title">FoxERP</h5>
-                        <form id="frmLogin">
+                        <form id="frmLogin" action="administrador.html">
                             <div class="form-group">
                                 <input type="email" class="form-control" id="txtEmail" aria-describedby="emailHelp"
                                     placeholder="Correo electronico"><i class="iconinput fa fa-user"></i>
@@ -79,11 +79,10 @@
         crossorigin="anonymous"></script>
     <!--fin bloque libs javascript-->
     <script>
-        $('#frmLogin').submit(function (e) {
+        $('#frmLogin').submit(function (e) {            
             var email = $('#txtEmail').val()
             var clave = $('#txtClave').val()
-            if (email == 'admin@admin.com' && clave == 'admin') {
-                window.location = 'administrador.html'
+            if (email == 'admin@admin.com' && clave == 'admin') {                
             } else {
                 e.preventDefault()
                 alert('No existe el usuario')
