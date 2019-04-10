@@ -223,6 +223,7 @@
         <div class="col col-lg-6">
             <div class="form-group">
                 <label for="valorResistencia">Valor resistencia</label>
+                <label for="lbValorResistencia" id="lbValorResistencia"></label>
             </div>
         </div>
         <div class="col col-lg-2">
@@ -270,6 +271,7 @@
             resistencia = addCommas(resistencia)
 
             resistencia += " \u2126 "
+            $('#lbValorResistencia').text(resistencia)
         }
 
         function addCommas(x) {
