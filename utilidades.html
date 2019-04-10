@@ -35,120 +35,197 @@
         </ul>
     </nav>
 
-    <div class="alert alert-warning alert-dismissible fade show" role="alert">
-        <strong>Holy guacamole!</strong> You should check in on some of those fields below.
-        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
-        </button>
+    <div class="row">
+        <div class="col col-lg-2"></div>
+        <div class="col col-lg-6">
+            <h2>Calculadora venta</h2>
+        </div>
+        <div class="col col-lg-2"></div>
     </div>
 
-    <div class="accordion" id="accordionUtilidades">
-        <div class="card">
-            <div class="card-header" id="headingOne">
-                <h2 class="mb-0">
-                    <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseOne"
-                        aria-expanded="true" aria-controls="collapseOne">
-                        Calculadora de producto
-                    </button>
-                </h2>
+    <div class="row">
+        <div class="col col-lg-2">
+        </div>
+        <div class="col col-lg-6">
+            <!--Valor de compra-->
+            <div class="form-group">
+                <label for="valordecompra">Valor de compra</label>
+                <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text">$</span>
+                    </div>
+                    <input type="number" class="form-control" id="txtValorCompra" placeholder="Valor compra">
+                    <div class="input-group-append">
+                        <span class="input-group-text">.00</span>
+                    </div>
+                </div>
             </div>
+        </div>
+        <div class="col col-lg-2">
+        </div>
+    </div>
+    <div class="row">
+        <div class="col col-lg-2">
+        </div>
+        <div class="col col-lg-6">
+            <!--Porcentaje de utilidad-->
+            <div class="form-group">
+                <label for="porcentajedeutilidad">Porcentaje de utilidad</label>
+                <div class="input-group mb-3">
+                    <input type="number" class="form-control" id="txtPorcentajeUtilidad"
+                        placeholder="Porcentaje de utilidad" max="100" min="0">
+                    <div class="input-group-append">
+                        <span class="input-group-text">%</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col col-lg-2">
+        </div>
+    </div>
+    <div class="row">
+        <div class="col col-lg-2">
+        </div>
+        <div class="col col-lg-6">
+            <!--Porcentaje de impuesto-->
+            <div class="form-group">
+                <label for="porcentajedeimpuesto">Porcentaje de impuesto (IVA)</label>
+                <div class="input-group mb-3">
+                    <input type="number" class="form-control" id="txtPorcentajeImpuesto"
+                        placeholder="Porcentaje de impuesto" max="100" min="0">
+                    <div class="input-group-append">
+                        <span class="input-group-text">%</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col col-lg-2">
+        </div>
+    </div>
+    <div class="row">
+        <div class="col col-lg-2">
+        </div>
+        <div class="col col-lg-6">
+            <!--Valor de venta-->
+            <div class="form-group">
+                <label for="valordeventa">Valor de venta</label>
+                <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text">$</span>
+                    </div>
+                    <input type="number" class="form-control-plaintext" id="txtValorVenta" placeholder="Valor venta">
+                    <div class="input-group-append">
+                        <span class="input-group-text">.00</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col col-lg-2">
+        </div>
+    </div>
 
-            <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
-                <div class="card-body">
-                    <!--Valor de compra-->
-                    <div class="form-group">
-                        <label for="valordecompra">Valor de compra</label>
-                        <div class="input-group mb-3">
-                            <div class="input-group-prepend">
-                                <span class="input-group-text">$</span>
-                            </div>
-                            <input type="number" class="form-control" id="txtValorCompra" placeholder="Valor compra">
-                            <div class="input-group-append">
-                                <span class="input-group-text">.00</span>
-                            </div>
-                        </div>
-                    </div>
-                    <!--Porcentaje de utilidad-->
-                    <div class="form-group">
-                        <label for="porcentajedeutilidad">Porcentaje de utilidad</label>
-                        <div class="input-group mb-3">
-                            <input type="number" class="form-control" id="txtPorcentajeUtilidad"
-                                placeholder="Porcentaje de utilidad" max="100" min="0">
-                            <div class="input-group-append">
-                                <span class="input-group-text">%</span>
-                            </div>
-                        </div>
-                    </div>
-                    <!--Porcentaje de impuesto-->
-                    <div class="form-group">
-                        <label for="porcentajedeimpuesto">Porcentaje de impuesto (IVA)</label>
-                        <div class="input-group mb-3">
-                            <input type="number" class="form-control" id="txtPorcentajeImpuesto"
-                                placeholder="Porcentaje de impuesto" max="100" min="0">
-                            <div class="input-group-append">
-                                <span class="input-group-text">%</span>
-                            </div>
-                        </div>
-                    </div>
-                    <!--Valor de venta-->
-                    <div class="form-group">
-                        <label for="valordeventa">Valor de venta</label>
-                        <div class="input-group mb-3">
-                            <div class="input-group-prepend">
-                                <span class="input-group-text">$</span>
-                            </div>
-                            <input type="number" readonly class="form-control-plaintext" id="txtValorVenta"
-                                placeholder="Valor venta">
-                            <div class="input-group-append">
-                                <span class="input-group-text">.00</span>
-                            </div>
-                        </div>
-                    </div>
-                    <button type="button" class="btn btn-dark" id="btnCalcularProducto">Calcular</button>
-                </div>
+    <div class="row">
+        <div class="col col-lg-2">
+        </div>
+        <div class="col col-lg-6">
+            <button type="button" class="btn btn-primary btn-sm" id="btnCalcularProducto">Calcular</button>
+        </div>
+        <div class="col col-lg-2">
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col col-lg-2"></div>
+        <div class="col col-lg-6">
+            <h2>Calculadora resistencia</h2>
+        </div>
+        <div class="col col-lg-2"></div>
+    </div>
+
+    <div class="row">
+        <div class="col col-lg-2">
+        </div>
+        <div class="col col-lg-6">
+            <div class="form-group">
+                <label for="banda1">Banda 1</label>
+                <select name="banda1" id="slbanda1" onchange="calcularResistencia(this)" class="form-control"
+                    style="color: white; background: #000;">
+                    <option value="0" style="color: white; background: black;" selected>Negro (0)</option>
+                    <option value="1" style="color: white; background: #583030;">Cafe (1)</option>
+                    <option value="2" style="color: white; background: red;">Rojo (2)</option>
+                    <option value="3" style="color: black; background: orange;">Naranja (3)</option>
+                    <option value="4" style="color: black; background: yellow;">Amarillo (4)</option>
+                    <option value="5" style="color: white; background: green;">Verde (5)</option>
+                    <option value="6" style="color: white; background: blue;">Azul (6)</option>
+                    <option value="7" style="color: white; background: purple;">Violeta (7)</option>
+                    <option value="8" style="color: white; background: gray;">Gris (8)</option>
+                    <option value="9" style="color: black; background: white;">Blanco (9)</option>
+                </select>
             </div>
         </div>
-        <div class="card">
-            <div class="card-header" id="headingTwo">
-                <h2 class="mb-0">
-                    <button class="btn btn-link collapsed" type="button" data-toggle="collapse"
-                        data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                        Collapsible Group Item #2
-                    </button>
-                </h2>
-            </div>
-            <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
-                <div class="card-body">
-                    Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3
-                    wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum
-                    eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla
-                    assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt
-                    sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer
-                    farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus
-                    labore sustainable VHS.
-                </div>
+        <div class="col col-lg-2">
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col col-lg-2">
+        </div>
+        <div class="col col-lg-6">
+            <div class="form-group">
+                <label for="banda2">Banda 2</label>
+                <select name="banda2" id="slbanda2" onchange="calcularResistencia(this)" class="form-control"
+                    style="color: white; background: #000;">
+                    <option value="0" style="color: white; background: black;" selected>Negro (0)</option>
+                    <option value="1" style="color: white; background: #583030;">Cafe (1)</option>
+                    <option value="2" style="color: white; background: red;">Rojo (2)</option>
+                    <option value="3" style="color: black; background: orange;">Naranja (3)</option>
+                    <option value="4" style="color: black; background: yellow;">Amarillo (4)</option>
+                    <option value="5" style="color: white; background: green;">Verde (5)</option>
+                    <option value="6" style="color: white; background: blue;">Azul (6)</option>
+                    <option value="7" style="color: white; background: purple;">Violeta (7)</option>
+                    <option value="8" style="color: white; background: gray;">Gris (8)</option>
+                    <option value="9" style="color: black; background: white;">Blanco (9)</option>
+                </select>
             </div>
         </div>
-        <div class="card">
-            <div class="card-header" id="headingThree">
-                <h2 class="mb-0">
-                    <button class="btn btn-link collapsed" type="button" data-toggle="collapse"
-                        data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                        Collapsible Group Item #3
-                    </button>
-                </h2>
+        <div class="col col-lg-2">
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col col-lg-2">
+        </div>
+        <div class="col col-lg-6">
+            <div class="form-group">
+                <label for="banda3">Banda 3</label>
+                <select name="banda3" id="slbanda3" onchange="calcularResistencia(this)" class="form-control"
+                    style="color: white; background: #000;">
+                    <option value="0" style="color: white; background: black;" selected>Negro (1)</option>
+                    <option value="1" style="color: white; background: #583030;">Cafe (10)</option>
+                    <option value="2" style="color: white; background: red;">Rojo (100)</option>
+                    <option value="3" style="color: black; background: orange;">Naranja (1K)</option>
+                    <option value="4" style="color: black; background: yellow;">Amarillo (10K)</option>
+                    <option value="5" style="color: white; background: green;">Verde (100K)</option>
+                    <option value="6" style="color: white; background: blue;">Azul (1M)</option>
+                    <option value="7" style="color: white; background: purple;">Violeta (10M)</option>
+                    <option value="8" style="color: white; background: gray;">Gris (100M)</option>
+                    <option value="9" style="color: black; background: white;">Blanco (1G)</option>
+                </select>
             </div>
-            <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
-                <div class="card-body">
-                    Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3
-                    wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum
-                    eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla
-                    assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt
-                    sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer
-                    farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus
-                    labore sustainable VHS.
-                </div>
+        </div>
+        <div class="col col-lg-2">
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col col-lg-2">
+        </div>
+        <div class="col col-lg-6">
+            <div class="form-group">
+                <label for="valorResistencia">Valor resistencia</label>
             </div>
+        </div>
+        <div class="col col-lg-2">
         </div>
     </div>
 
@@ -166,20 +243,40 @@
         crossorigin="anonymous"></script>
     <!--Calculos-->
     <script>
-        $(document).ready(function () {
-            $('.alert').alert('close')
-        })
         $('#btnCalcularProducto').click(function () {
-            debugger;
             var valorCompra = $('#txtValorCompra').val()
             var porcentajeUtilidad = $('#txtPorcentajeUtilidad').val()
             var porcentajeImpuesto = $('#txtPorcentajeImpuesto').val()
-            if (valorCompra && porcentajeUtilidad && porcentajeImpuesto) {
 
+            if (valorCompra && porcentajeUtilidad && porcentajeImpuesto) {
+                var valorImpuesto = valorCompra * (porcentajeImpuesto / 100)
+                var valorVenta = valorImpuesto + parseInt(valorCompra)
+                $('#txtValorVenta').val(valorVenta)
             } else {
-                
+
             }
         })
+        function calcularResistencia(input) {
+            debugger;
+            var slbanda1 = $('#slbanda1').val()
+            var slbanda2 = $('#slbanda2').val()
+            var slbanda3 = $('#slbanda3').val()
+            var resistencia = slbanda1 + slbanda2
+
+            for (var i = 0; i < slbanda3; i++) {
+                resistencia += "0"
+            }
+
+            resistencia = addCommas(resistencia)
+
+            resistencia += " \u2126 "
+        }
+
+        function addCommas(x) {
+            // This handy function found here:
+            // http://stackoverflow.com/questions/2901102/how-to-print-a-number-with-commas-as-thousands-separators-in-javascript
+            return x.replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+        }
     </script>
 </body>
 
