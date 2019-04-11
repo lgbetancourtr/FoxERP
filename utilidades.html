@@ -259,6 +259,11 @@
         })
         function calcularResistencia(input) {
             debugger;
+
+            var bgColors = new Array("black", "#583030", "red", "orange", "yellow", "green", "blue", "purple", "gray", "white", "gold", "silver");
+            var fgColors = new Array("white", "white", "white", "black", "black", "white", "white", "white", "black", "black", "black", "black");
+
+            //var slbanda1 = ($('#slbanda1').val() == '0') ? '' : $('#slbanda1').val()
             var slbanda1 = $('#slbanda1').val()
             var slbanda2 = $('#slbanda2').val()
             var slbanda3 = $('#slbanda3').val()
@@ -272,6 +277,16 @@
 
             resistencia += " \u2126 "
             $('#lbValorResistencia').text(resistencia)
+
+            //$('#slbanda1').css('background', bgColors[(slbanda1 == '') ? 0 : parseInt(slbanda1)])
+            //$('#slbanda1').css('color', fgColors[(slbanda1 == '') ? 0 : parseInt(slbanda1)])
+            $('#slbanda1').css('background', bgColors[parseInt(slbanda1)])
+            $('#slbanda1').css('color', fgColors[parseInt(slbanda1)])
+            $('#slbanda2').css('background', bgColors[parseInt(slbanda2)])
+            $('#slbanda2').css('color', fgColors[parseInt(slbanda2)])
+            $('#slbanda3').css('background', bgColors[parseInt(slbanda3)])
+            $('#slbanda3').css('color', fgColors[parseInt(slbanda3)])
+            
         }
 
         function addCommas(x) {
